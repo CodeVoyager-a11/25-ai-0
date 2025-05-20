@@ -42,4 +42,4 @@ if user_mbti:
 
 # 👣 푸터
 st.markdown("---")
-st.markdown("Made with ❤️ by ChatGPT")
+st.markdown("Made with  by someone")
