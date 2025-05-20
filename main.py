@@ -7,6 +7,14 @@ st.set_page_config(page_title="MBTI 직업 추천기", page_icon="💼", layout=
 st.title("🌟 MBTI 기반 직업 추천기 🎯")
 st.markdown("당신의 MBTI를 입력하면 어울리는 직업을 알려드려요! 💼✨")
 
+# 🎭 MBTI 유형 전체
+mbti_types = [
+    "INFP", "ENFP", "INFJ", "ENFJ",
+    "INTP", "ENTP", "INTJ", "ENTJ",
+    "ISFJ", "ESFJ", "ISTJ", "ESTJ",
+    "ISFP", "ESFP", "ISTP", "ESTP"
+]
+
 # 🧠 MBTI - 직업 매칭 딕셔너리
 mbti_jobs = {
     "INFP": ["작가 ✍️", "상담사 🧠", "그래픽 디자이너 🎨"],
