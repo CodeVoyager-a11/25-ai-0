@@ -9,7 +9,7 @@ st.markdown("당신의 MBTI를 입력하면 어울리는 직업을 알려드려�
 st.markdown("대소문자 구분 없이 입력해보세요! (예: `infp`, `ENFP` 등) 😉")
 
 # 📋 MBTI 목록을 사이드바에 표시
-st.sidebar.title("📌 MBTI 전체 목록")
+with st.sidebar.expander("📋 MBTI 목록 리스트 보기"):
 mbti_types = [
     "INFP", "ENFP", "INFJ", "ENFJ",
     "INTP", "ENTP", "INTJ", "ENTJ",
