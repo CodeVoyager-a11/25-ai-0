@@ -8,16 +8,29 @@ st.title("🌟 MBTI 기반 직업 추천기 🎯")
 st.markdown("당신의 MBTI를 입력하면 어울리는 직업을 알려드려요! 💼✨")
 st.markdown("대소문자 구분 없이 입력해보세요! (예: `infp`, `ENFP` 등) 😉")
 
-# 📋 MBTI 목록을 사이드바에 표시 (접이식 리스트로)
 with st.sidebar.expander("📋 MBTI 목록 리스트 보기"):
-    mbti_types = [
-        "INFP", "ENFP", "INFJ", "ENFJ",
-        "INTP", "ENTP", "INTJ", "ENTJ",
-        "ISFJ", "ESFJ", "ISTJ", "ESTJ",
-        "ISFP", "ESFP", "ISTP", "ESTP"
-    ]
-    for mbti in mbti_types:
-        st.markdown(f"🔹 **{mbti}**")
+    mbti_descriptions = {
+        "INFP": "이상주의적인 중재자 🌈",
+        "ENFP": "열정적인 활동가 🔥",
+        "INFJ": "통찰력 있는 조언자 🔮",
+        "ENFJ": "타인을 이끄는 외교관 🤝",
+        "INTP": "논리적인 사색가 🧠",
+        "ENTP": "재치 있는 발명가 🛠️",
+        "INTJ": "전략적인 계획자 🧩",
+        "ENTJ": "카리스마 있는 리더 👑",
+        "ISFJ": "성실한 수호자 🛡️",
+        "ESFJ": "따뜻한 협력자 💗",
+        "ISTJ": "책임감 있는 관리자 📋",
+        "ESTJ": "체계적인 조직자 🏗️",
+        "ISFP": "조용한 예술가 🎨",
+        "ESFP": "자유로운 연예인 🎤",
+        "ISTP": "실용적인 해결사 🔧",
+        "ESTP": "모험적인 실행자 🏍️",
+    }
+
+    for mbti, desc in mbti_descriptions.items():
+        st.markdown(f"🔹 **{mbti}** — {desc}")
+
 
 
 # 🧠 MBTI - 직업 매칭 딕셔너리
