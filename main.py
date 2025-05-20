@@ -53,6 +53,10 @@ mbti_jobs = {
     "ESTP": ["세일즈 전문가 💼", "기업가 🏢", "스턴트 배우 🎬"]
 }
 
+# 🔽 드롭다운 입력창 (MBTI + 설명)
+mbti_options = [f"{mbti} - {desc}" for mbti, desc in mbti_descriptions.items()]
+selected = st.selectbox("🔍 MBTI를 선택하세요", options=mbti_options)
+
 # 📝 MBTI 입력 받기
 user_mbti = st.text_input("당신의 MBTI를 입력해주세요 (예: INFP)", max_chars=4).upper()
 
