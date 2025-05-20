@@ -60,6 +60,14 @@ selected = st.selectbox("🔍 MBTI를 선택하세요", options=mbti_options)
 # 🔍 선택된 MBTI 코드 추출
 selected_mbti = selected.split(" - ")[0]
 
+# 🔎 추천 출력
+st.subheader(f"✨ `{selected_mbti}` 유형의 설명")
+st.info(f"{mbti_descriptions[selected_mbti]}")
+
+st.subheader("💼 어울리는 직업 추천")
+for job in mbti_jobs[selected_mbti]:
+    st.success(f"✅ {job}")
+
 # 📝 MBTI 입력 받기
 user_mbti = st.text_input("당신의 MBTI를 입력해주세요 (예: INFP)", max_chars=4).upper()
 
