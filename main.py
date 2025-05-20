@@ -6,6 +6,18 @@ st.set_page_config(page_title="MBTI 직업 추천기", page_icon="💼", layout=
 # 💖 제목
 st.title("🌟 MBTI 기반 직업 추천기 🎯")
 st.markdown("당신의 MBTI를 입력하면 어울리는 직업을 알려드려요! 💼✨")
+st.markdown("대소문자 구분 없이 입력해보세요! (예: `infp`, `ENFP` 등) 😉")
+
+# 📋 MBTI 목록을 사이드바에 표시
+st.sidebar.title("📌 MBTI 전체 목록")
+mbti_types = [
+    "INFP", "ENFP", "INFJ", "ENFJ",
+    "INTP", "ENTP", "INTJ", "ENTJ",
+    "ISFJ", "ESFJ", "ISTJ", "ESTJ",
+    "ISFP", "ESFP", "ISTP", "ESTP"
+]
+for mbti in mbti_types:
+    st.sidebar.markdown(f"🔹 **{mbti}**")
 
 
 # 🧠 MBTI - 직업 매칭 딕셔너리
